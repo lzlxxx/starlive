@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.starlive.org.mapper.UsersMapper">
+
+    <resultMap id="BaseResultMap" type="com.starlive.org.pojo.Users">
+            <id property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="username" column="username" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="avatarUrl" column="avatar_url" jdbcType="VARCHAR"/>
+            <result property="location" column="location" typeHandler="com.starlive.org.handler.GeoPointTypeHandler"/>
+            <result property="ipAddress" column="ip_address" jdbcType="VARCHAR"/>
+            <result property="isTest" column="is_test" jdbcType="TINYINT"/>
+            <result property="bio" column="bio" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="followersCount" column="followers_count" jdbcType="BIGINT"/>
+    </resultMap>
+
+<!--    <select id="FindUserById" resultMap="BaseResultMap">-->
+<!--        SELECT user_id, username, password, email,avatar_url, location, ip_address, is_test, bio, create_time, update_time, followers_count-->
+<!--        FROM users-->
+<!--        WHERE user_id = #{userId}-->
+<!--    </select>-->
+
+<!--    <update id="UpdateFollowersCountById" >-->
+<!--        update users set followers_count =#{count} where user_id = #{userId}-->
+<!--    </update>-->
+<!--    -->
+
+    <sql id="Base_Column_List">
+        user_id,username,password,
+        email,avatar_url,location,
+        ip_address,is_test,bio,
+        create_time,update_time,followers_count
+    </sql>
+</mapper>
