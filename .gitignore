@@ -1,0 +1,5 @@
+# 忽略 Maven 编译目录
+target/
+*.jar
+*.war
+*.class

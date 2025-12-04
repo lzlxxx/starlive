@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: starlive-chat-test
+
+server:
+  port: 18086
+
+netty:
+  port: 18087
+  websocket:
+    path: /ws
+  heartbeat:
+    reader-idle-time: 30
+    writer-idle-time: 30
+    all-idle-time: 60
+
+chat:
+  storage:
+    path: ./target/test-chat-messages
+
+app:
+  name: starlive-chat-test

@@ -1,0 +1,70 @@
+server:
+  port: 10081
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+
+spring:
+  application:
+    name: user-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/StarLive?allowPublicKeyRetrieval=true&useSSL=false?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+
+
+  cloud:
+    nacos:
+      #        服务发现
+      discovery:
+        server-addr: localhost:8848
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: 'starlive123'
+      timeout: 60000
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: -1ms
+cache:
+  ttl: 3600 # 缓存滞留时间 1小时
+
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
+# 自定义配置
+minio:
+  endpoint: http://localhost:9000
+  accessKey: DCWFbmBbDZIKmWhQUa1X
+  secretKey: LKc4ctZ4THnRjNuYk2G0h9kuIaFaeLN26vmMbET2
+  bucketName: test
+
+

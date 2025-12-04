@@ -1,0 +1,54 @@
+
+services:
+  nacos:
+    image: 'nacos/nacos-server:v2.2.0'
+    container_name: nacos-server
+    environment:
+      - MODE=standalone
+      - PREFER_HOST_MODE=hostname
+      - NACOS_DEBUG=n  # 关闭调试模式
+      - TZ=Asia/Shanghai  # 设置时区为上海
+    ports:
+      #      web端口
+      - "8848:8848"
+      #      grpc端口
+      - "9848:9848"
+  mysql :
+    image: mysql:8.0
+#    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: developer
+      MYSQL_PASSWORD: developer
+      MYSQL_DATABASE: starlive
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3309:3306"
+
+  redis:
+    image: redis:7.0
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+  rocketmq:
+    image: apache/rocketmq:4.9.3
+    container_name: rocketmq
+    command: ["sh", "-c", "bin/mqbroker -n localhost:9876 boot"]
+    ports:
+      # namerserver端口
+      - "9876:9876"
+      #      broker端口
+      - "10911:10911"
+      #      broker监听端口
+      - "10909:10909"
+    volumes:
+      - rocketmq_data:/home/rocketmq/store
+
+# 部署时需要加上依赖的服务打成的镜像
+volumes:
+  mysql_data:
+  redis_data:
+  rocketmq_data:

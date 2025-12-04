@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.starlive.org.mapper.CollectionFolderMapper">
+
+    <resultMap id="BaseResultMap" type="com.starlive.org.pojo.CollectionFolder">
+            <id property="folderId" column="folder_id" jdbcType="BIGINT"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="folderName" column="folder_name" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="collectionCount" column="collection_count" jdbcType="INTEGER"/>
+    </resultMap>
+
+
+    <resultMap id="CollectionFolderInfoMap" type="com.starlive.org.vo.CollectionFolderInfo">
+        <id property="collectionFolderId" column="folder_id" jdbcType="BIGINT"/>
+        <result property="collectionFolderName" column="folder_name" jdbcType="VARCHAR"/>
+        <result property="collectionCount" column="collection_count" jdbcType="INTEGER"/>
+    </resultMap>
+<!--    <select id="getCollectionFolderById" resultMap="CollectionFolderInfoMap" >-->
+<!--        select folder_id,folder_name,collection_count from collection_folder where user_id = #{userId}-->
+<!--        </select>-->
+</mapper>

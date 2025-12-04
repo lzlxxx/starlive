@@ -1,0 +1,35 @@
+package com.starlive.org.controller;
+
+
+import com.starlive.org.service.impl.MessageFileStorage;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Map;
+
+@Slf4j
+@RestController
+@RequestMapping("/api/monitor")
+public class MonitorController {
+
+    @Autowired
+    private MessageFileStorage messageFileStorage;
+
+    /**
+     * 获取缓存统计信息
+     */
+    @GetMapping("/cache/stats")
+    public ResponseEntity<Map<String, Object>> getCacheStats() {
+        try {
+            Map<String, Object> stats = messageFileStorage.getCacheStats();
+            return ResponseEntity.ok(stats);
+        } catch (Exception e) {
+            log.error("Error getting cache stats", e);
+            return ResponseEntity.internalServerError().build();
+        }
+    }
+} 

@@ -1,0 +1,83 @@
+<script>
+    // 添加最后同步时间变量
+    let lastSyncTime = localStorage.getItem('lastSyncTime') || '1970-01-01T00:00:00.000Z';
+
+    // 添加同步消息函数
+    function syncMessages() {
+        if (!currentActivityId) {
+            console.log('未加入活动，不需要同步');
+            return;
+        }
+
+        sendMessage({
+            type: 'SYNC_REQUEST',
+            messageId: generateMessageId(),
+            fromUserId: "17",
+            fromUserName: "测试用户",
+            activityId: currentActivityId,
+            content: lastSyncTime,  // 使用最后同步时间作为content
+            timestamp: new Date().toISOString()
+        });
+
+        console.log('发送同步请求，最后同步时间:', lastSyncTime);
+    }
+
+    // 修改消息处理函数，添加同步消息处理
+    function handleMessage(event) {
+        const message = JSON.parse(event.data);
+        console.log('收到消息:', message);
+
+        switch (message.type) {
+            case 'SYNC_RESPONSE':
+                handleSyncResponse(message);
+                break;
+            // ... 其他现有的消息处理 ...
+        }
+    }
+
+    // 处理同步响应
+    function handleSyncResponse(message) {
+        if (!message.content) return;
+        
+        try {
+            const syncedMessages = JSON.parse(message.content);
+            console.log('收到同步消息:', syncedMessages.length, '条');
+
+            // 按时间排序
+            syncedMessages.sort((a, b) => 
+                new Date(a.timestamp) - new Date(b.timestamp)
+            );
+
+            // 显示同步的消息
+            syncedMessages.forEach(msg => {
+                displayActivityMessage(msg);
+            });
+
+            // 更新最后同步时间
+            if (syncedMessages.length > 0) {
+                lastSyncTime = syncedMessages[syncedMessages.length - 1].timestamp;
+                localStorage.setItem('lastSyncTime', lastSyncTime);
+                console.log('更新最后同步时间:', lastSyncTime);
+            }
+        } catch (error) {
+            console.error('处理同步消息失败:', error);
+        }
+    }
+
+    // 修改加入活动函数，添加同步请求
+    function joinActivity() {
+        // ... 现有的加入活动代码 ...
+
+        // 加入活动后立即请求同步
+        setTimeout(() => {
+            syncMessages();
+        }, 1000); // 延迟1秒后同步，确保加入活动完成
+    }
+
+    // 添加定期同步
+    setInterval(() => {
+        if (ws && ws.readyState === WebSocket.OPEN) {
+            syncMessages();
+        }
+    }, 30000); // 每30秒同步一次
+</script> 

@@ -1,0 +1,57 @@
+server:
+  port: 10087
+
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/Starlive?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  data:
+    redis:
+      port: 6379
+      host: localhost
+      password: starlive123
+      timeout: 60000
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: -1ms
+  elasticsearch:
+    uris: 127.0.0.1:9200
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+  global-config:
+    db-config:
+      update-strategy: not_null
+
+minio:
+  config:
+    url: http://127.0.0.1:9005 #ip地址
+    accessKey: minioadmin #  账号
+    secretKey: minioadmin #  密码
+    bucketName: videoData
+    expiry: 1
+    breakpointTime: 1
+
+page:
+  size: 10
+
+
+

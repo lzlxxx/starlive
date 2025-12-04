@@ -1,0 +1,552 @@
+[
+  {
+    "organizerName": "星空活动组织",
+    "title": "星空音乐节",
+    "description": "一场充满活力的音乐盛宴，欢迎所有音乐爱好者参加。",
+    "startTime": "2024-12-01T18:00:00",
+    "endTime": "2024-12-01T23:00:00",
+    "location": "星空公园",
+    "locationPoint": {
+      "lat": 34.0522,
+      "lon": -118.2437
+    },
+    "organizerId": 12345,
+    "posterUrl": "https://example.com/poster.jpg",
+    "rewards": [
+      {
+        "rewardName": "VIP门票",
+        "description": "享受VIP专属座位和免费饮料。",
+        "quantity": 50
+      },
+      {
+        "rewardName": "纪念T恤",
+        "description": "限量版星空音乐节纪念T恤。",
+        "quantity": 200
+      }
+    ]
+  },
+  {
+    "organizerName": "未来科技公司",
+    "title": "人工智能论坛",
+    "description": "探讨人工智能未来的技术大会。",
+    "startTime": "2024-12-02T09:00:00",
+    "endTime": "2024-12-02T17:00:00",
+    "location": "国际会展中心",
+    "locationPoint": {
+      "lat": 31.2304,
+      "lon": 121.4737
+    },
+    "organizerId": 67890,
+    "posterUrl": "https://example.com/ai-forum.jpg",
+    "rewards": [
+      {
+        "rewardName": "纪念笔记本",
+        "description": "限量版论坛纪念笔记本。",
+        "quantity": 100
+      }
+    ]
+  },
+  {
+    "organizerName": "健身爱好者俱乐部",
+    "title": "城市马拉松",
+    "description": "一场全民参与的健康活动。",
+    "startTime": "2024-12-10T07:00:00",
+    "endTime": "2024-12-10T11:00:00",
+    "location": "滨海大道",
+    "locationPoint": {
+      "lat": 22.3964,
+      "lon": 114.1095
+    },
+    "organizerId": 23456,
+    "posterUrl": "https://example.com/marathon.jpg",
+    "rewards": [
+      {
+        "rewardName": "完赛奖牌",
+        "description": "马拉松专属完赛奖牌。",
+        "quantity": 200
+      }
+    ]
+  },
+  {
+    "organizerName": "教育基金会",
+    "title": "科学实验展览",
+    "description": "展示最新的科学实验成果。",
+    "startTime": "2024-12-15T10:00:00",
+    "endTime": "2024-12-15T16:00:00",
+    "location": "科技博物馆",
+    "locationPoint": {
+      "lat": 40.7128,
+      "lon": -74.006
+    },
+    "organizerId": 54321,
+    "posterUrl": "https://example.com/science-expo.jpg",
+    "rewards": [
+      {
+        "rewardName": "实验手册",
+        "description": "科学实验指导手册。",
+        "quantity": 300
+      }
+    ]
+  },
+  {
+    "organizerName": "欢乐旅游团",
+    "title": "冬季摄影大赛",
+    "description": "捕捉冬季美景的摄影活动。",
+    "startTime": "2024-12-20T08:00:00",
+    "endTime": "2024-12-20T18:00:00",
+    "location": "雪山风景区",
+    "locationPoint": {
+      "lat": 45.4215,
+      "lon": -75.6972
+    },
+    "organizerId": 34567,
+    "posterUrl": "https://example.com/photo-contest.jpg",
+    "rewards": [
+      {
+        "rewardName": "相机包",
+        "description": "优质摄影专用相机包。",
+        "quantity": 20
+      }
+    ]
+  },
+  {
+    "organizerName": "环保组织",
+    "title": "植树造林活动",
+    "description": "让我们共同绿化地球。",
+    "startTime": "2024-12-05T08:00:00",
+    "endTime": "2024-12-05T18:00:00",
+    "location": "城市公园",
+    "locationPoint": {
+      "lat": 41.8781,
+      "lon": -87.6298
+    },
+    "organizerId": 67890,
+    "posterUrl": "https://example.com/tree-planting.jpg",
+    "rewards": [
+      {
+        "rewardName": "植树证书",
+        "description": "参与植树的荣誉证书。",
+        "quantity": 100
+      }
+    ]
+  },
+  {
+    "organizerName": "摄影俱乐部",
+    "title": "日落摄影大赛",
+    "description": "捕捉最美日落。",
+    "startTime": "2024-12-25T16:00:00",
+    "endTime": "2024-12-25T20:00:00",
+    "location": "海边公园",
+    "locationPoint": {
+      "lat": 22.2844,
+      "lon": 114.158
+    },
+    "organizerId": 23456,
+    "posterUrl": "https://example.com/sunset-contest.jpg",
+    "rewards": [
+      {
+        "rewardName": "摄影手册",
+        "description": "摄影基础知识。",
+        "quantity": 100
+      }
+    ]
+  },
+  {
+    "organizerName": "美食协会",
+    "title": "美食节",
+    "description": "让我们一起享受美食。",
+    "startTime": "2024-12-15T10:00:00",
+    "endTime": "2024-12-15T20:00:00",
+    "location": "城市广场",
+    "locationPoint": {
+      "lat": 48.8566,
+      "lon": 2.3522
+    },
+    "organizerId": 23456,
+    "posterUrl": "https://example.com/food-festival.jpg",
+    "rewards": [
+      {
+        "rewardName": "美食礼包",
+        "description": "包含多种美味。",
+        "quantity": 300
+      }
+    ]
+  },
+  {
+    "organizerName": "文化协会",
+    "title": "艺术展览",
+    "description": "展示最新艺术作品。",
+    "startTime": "2024-12-20T09:00:00",
+    "endTime": "2024-12-20T18:00:00",
+    "location": "文化中心",
+    "locationPoint": {
+      "lat": 35.6895,
+      "lon": 139.6917
+    },
+    "organizerId": 67890,
+    "posterUrl": "https://example.com/art-exhibition.jpg",
+    "rewards": [
+      {
+        "rewardName": "艺术手册",
+        "description": "艺术知识介绍。",
+        "quantity": 50
+      }
+    ]
+  },
+  {
+    "organizerName": "科技创新公司",
+    "title": "未来技术展",
+    "description": "展示创新科技和前沿技术。",
+    "startTime": "2024-12-12T09:00:00",
+    "endTime": "2024-12-12T18:00:00",
+    "location": "创新中心",
+    "locationPoint": {
+      "lat": 40.7128,
+      "lon": -74.0060
+    },
+    "organizerId": 12345,
+    "posterUrl": "https://example.com/tech-expo.jpg",
+    "rewards": [
+      {
+        "rewardName": "科技小册子",
+        "description": "介绍未来技术的实用小册子。",
+        "quantity": 100
+      }
+    ]
+  },
+  {
+    "organizerName": "极限运动俱乐部",
+    "title": "滑雪大赛",
+    "description": "冬季极限运动滑雪比赛。",
+    "startTime": "2024-12-23T09:00:00",
+    "endTime": "2024-12-23T17:00:00",
+    "location": "雪山滑雪场",
+    "locationPoint": {
+      "lat": 45.0471,
+      "lon": -93.2111
+    },
+    "organizerId": 56789,
+    "posterUrl": "https://example.com/ski-contest.jpg",
+    "rewards": [
+      {
+        "rewardName": "滑雪装备",
+        "description": "滑雪专用装备。",
+        "quantity": 30
+      }
+    ]
+  },
+  {
+    "organizerName": "书友会",
+    "title": "读书交流会",
+    "description": "和书友一起讨论最新书籍。",
+    "startTime": "2024-12-18T14:00:00",
+    "endTime": "2024-12-18T16:00:00",
+    "location": "城市图书馆",
+    "locationPoint": {
+      "lat": 39.9042,
+      "lon": 116.4074
+    },
+    "organizerId": 67890,
+    "posterUrl": "https://example.com/book-club.jpg",
+    "rewards": [
+      {
+        "rewardName": "书籍折扣券",
+        "description": "购书时使用的折扣券。",
+        "quantity": 50
+      }
+    ]
+  },
+  {
+    "organizerName": "科技公司",
+    "title": "编程马拉松",
+    "description": "参与编程挑战，赢取奖励。",
+    "startTime": "2024-12-08T10:00:00",
+    "endTime": "2024-12-08T20:00:00",
+    "location": "编程实验室",
+    "locationPoint": {
+      "lat": 36.7783,
+      "lon": -119.4179
+    },
+    "organizerId": 12345,
+    "posterUrl": "https://example.com/coding-marathon.jpg",
+    "rewards": [
+      {
+        "rewardName": "编程书籍",
+        "description": "编程技术书籍。",
+        "quantity": 50
+      }
+    ]
+  },
+  {
+    "organizerName": "音乐俱乐部",
+    "title": "摇滚音乐会",
+    "description": "一场震撼的摇滚音乐表演。",
+    "startTime": "2024-12-30T19:00:00",
+    "endTime": "2024-12-30T23:00:00",
+    "location": "音乐厅",
+    "locationPoint": {
+      "lat": 40.7306,
+      "lon": -73.9352
+    },
+    "organizerId": 56789,
+    "posterUrl": "https://example.com/rock-concert.jpg",
+    "rewards": [
+      {
+        "rewardName": "VIP座位",
+        "description": "享受VIP座位的独特体验。",
+        "quantity": 30
+      }
+    ]
+  },
+  {
+    "organizerName": "电影联盟",
+    "title": "电影首映礼",
+    "description": "一场电影的首映仪式，邀您一起观看。",
+    "startTime": "2024-12-05T19:30:00",
+    "endTime": "2024-12-05T22:00:00",
+    "location": "电影院",
+    "locationPoint": {
+      "lat": 52.5200,
+      "lon": 13.4050
+    },
+    "organizerId": 12345,
+    "posterUrl": "https://example.com/movie-premiere.jpg",
+    "rewards": [
+      {
+        "rewardName": "电影票",
+        "description": "免费观看电影票。",
+        "quantity": 100
+      }
+    ]
+  },
+  {
+    "organizerName": "家居设计公司",
+    "title": "家居设计展",
+    "description": "展示最新家居设计方案和产品。",
+    "startTime": "2024-12-18T10:00:00",
+    "endTime": "2024-12-18T16:00:00",
+    "location": "家居展览中心",
+    "locationPoint": {
+      "lat": 40.7488,
+      "lon": -73.9857
+    },
+    "organizerId": 67890,
+    "posterUrl": "https://example.com/home-design.jpg",
+    "rewards": [
+      {
+        "rewardName": "家居小物",
+        "description": "家居装饰小物件。",
+        "quantity": 200
+      }
+    ]
+  }
+]
+
+
+
+============================错误数据=======================
+[
+  {
+    "organizerName": "",  // 不符合@NotBlank
+    "title": "星空音乐节",
+    "description": "一场充满活力的音乐盛宴。",
+    "startTime": "2024-12-01T18:00:00",
+    "endTime": "2024-12-01T23:00:00",
+    "location": "星空公园",
+    "locationPoint": {
+      "lat": 34.0522,
+      "lon": -118.2437
+    },
+    "organizerId": 12345,
+    "posterUrl": "https://example.com/poster.jpg",
+    "rewards": [
+      {
+        "rewardName": "VIP门票",
+        "description": "享受VIP专属座位和免费饮料。",
+        "quantity": 50
+      }
+    ]
+  },
+  {
+    "organizerName": "未来科技公司",
+    "title": null,  // 不符合@NotNull
+    "description": "探讨人工智能未来的技术大会。",
+    "startTime": "2024-12-02T09:00:00",
+    "endTime": "2024-12-02T17:00:00",
+    "location": "国际会展中心",
+    "locationPoint": {
+      "lat": 31.2304,
+      "lon": 121.4737
+    },
+    "organizerId": 67890,
+    "posterUrl": "https://example.com/ai-forum.jpg",
+    "rewards": [
+      {
+        "rewardName": "纪念笔记本",
+        "description": "限量版论坛纪念笔记本。",
+        "quantity": 100
+      }
+    ]
+  },
+  {
+    "organizerName": "健身爱好者俱乐部",
+    "title": "城市马拉松",
+    "description": "一次非常长的描述，描述内容超过了限制的100个字符，应该导致@Size验证失败。",  // 描述过长
+    "startTime": "2024-12-10T07:00:00",
+    "endTime": "2024-12-10T11:00:00",
+    "location": "滨海大道",
+    "locationPoint": {
+      "lat": 22.3964,
+      "lon": 114.1095
+    },
+    "organizerId": 23456,
+    "posterUrl": "https://example.com/marathon.jpg",
+    "rewards": [
+      {
+        "rewardName": "完赛奖牌",
+        "description": "马拉松专属完赛奖牌。",
+        "quantity": 200
+      }
+    ]
+  },
+  {
+    "organizerName": "教育基金会",
+    "title": "科学实验展览",
+    "description": "展示最新的科学实验成果。",
+    "startTime": "2023-12-15T10:00:00",  // 不符合@FutureOrPresent
+    "endTime": "2024-12-15T16:00:00",
+    "location": "科技博物馆",
+    "locationPoint": {
+      "lat": 40.7128,
+      "lon": -74.006
+    },
+    "organizerId": 54321,
+    "posterUrl": "https://example.com/science-expo.jpg",
+    "rewards": [
+      {
+        "rewardName": "实验手册",
+        "description": "科学实验指导手册。",
+        "quantity": 300
+      }
+    ]
+  },
+  {
+    "organizerName": "欢乐旅游团",
+    "title": "冬季摄影大赛",
+    "description": "捕捉冬季美景的摄影活动。",
+    "startTime": "2024-12-20T08:00:00",
+    "endTime": "2024-12-10T18:00:00",  // 结束时间早于开始时间
+    "location": "雪山风景区",
+    "locationPoint": {
+      "lat": 45.4215,
+      "lon": -75.6972
+    },
+    "organizerId": 34567,
+    "posterUrl": "https://example.com/photo-contest.jpg",
+    "rewards": [
+      {
+        "rewardName": "相机包",
+        "description": "优质摄影专用相机包。",
+        "quantity": 20
+      }
+    ]
+  },
+  {
+    "organizerName": "环保组织",
+    "title": "植树造林活动",
+    "description": "让我们共同绿化地球。",
+    "startTime": "2024-12-05T08:00:00",
+    "endTime": "2024-12-05T18:00:00",
+    "location": "",
+    "locationPoint": {  // 缺少必要的经纬度字段
+    },
+    "organizerId": 67890,
+    "posterUrl": "https://example.com/tree-planting.jpg",
+    "rewards": [
+      {
+        "rewardName": "植树证书",
+        "description": "参与植树的荣誉证书。",
+        "quantity": 100
+      }
+    ]
+  },
+  {
+    "organizerName": "摄影俱乐部",
+    "title": "日落摄影大赛",
+    "description": "捕捉最美日落。",
+    "startTime": "2024-12-25T16:00:00",
+    "endTime": "2024-12-25T20:00:00",
+    "location": "海边公园",
+    "locationPoint": {
+      "lat": 22.2844,
+      "lon": null  // 经纬度不完整
+    },
+    "organizerId": 23456,
+    "posterUrl": "https://example.com/sunset-contest.jpg",
+    "rewards": [
+      {
+        "rewardName": "摄影手册",
+        "description": "摄影基础知识。",
+        "quantity": 100
+      }
+    ]
+  },
+  {
+    "organizerName": "美食协会",
+    "title": "美食节",
+    "description": "让我们一起享受美食。",
+    "startTime": "2024-12-15T10:00:00",
+    "endTime": "2024-12-15T20:00:00",
+    "location": "城市广场",
+    "locationPoint": {
+      "lat": "invalid",  // 非法格式的纬度
+      "lon": 114.1095
+    },
+    "organizerId": 23456,
+    "posterUrl": "https://example.com/food-festival.jpg",
+    "rewards": [
+      {
+        "rewardName": "美食礼包",
+        "description": "包含多种美味。",
+        "quantity": -10  // 非法负数数量
+      }
+    ]
+  },
+  {
+    "organizerName": "健康协会",
+    "title": "跑步比赛",
+    "description": "全民健身跑步活动。",
+    "startTime": "2024-12-10T07:00:00",
+    "endTime": "2024-12-10T11:00:00",
+    "location": "健身公园",
+    "locationPoint": {
+      "lat": 30.0,
+      "lon": 120.0
+    },
+    "organizerId": null,  // 不符合@NotNull
+    "posterUrl": "https://example.com/running.jpg",
+    "rewards": []
+  },
+  {
+    "organizerName": "文化协会",
+    "title": "艺术展览",
+    "description": "展示最新艺术作品。",
+    "startTime": "2024-12-20T09:00:00",
+    "endTime": "2024-12-20T18:00:00",
+    "location": "文化中心",
+    "locationPoint": {
+      "lat": 35.0,
+      "lon": 110.0
+    },
+    "organizerId": 67890,
+    "posterUrl": "",  // 不符合@NotBlank
+    "rewards": [
+      {
+        "rewardName": "艺术手册",
+        "description": "艺术知识介绍。",
+        "quantity": 50
+      }
+    ]
+  }
+]
+

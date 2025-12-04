@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: starlive-chat
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #window中docker访问宿主机host.docker.internal
+    #url: jdbc:mysql://host.docker.internal:3306/StarLive?allowPublicKeyRetrieval=true&useSSL=false?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    url: jdbc:mysql://mysql:3306/StarLive?allowPublicKeyRetrieval=true&useSSL=false?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+server:
+  port: 8086
+
+netty:
+  port: 8087  # WebSocket服务端口
+  websocket:
+    path: /ws
+  heartbeat:
+    reader-idle-time: 30
+    writer-idle-time: 30
+    all-idle-time: 60
+
+# 聊天消息存储配置
+chat:
+  storage:
+    path: ./chat_messages  # 消息存储根目录
+    max-file-size: 10485760    # 单个文件最大大小
+    retention-days: 7      # 消息保留天数
+    max-messages-per-file: 1000  # 单个文件最大消息数
+
+app:
+  name: starlive-chat
+# 自定义配置3
+minio:
+  endpoint: http://minio:9000
+  accessKey: minioadmin
+  secretKey: minioadmin
+  bucketName: chat-images

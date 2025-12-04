@@ -1,0 +1,49 @@
+#\u6570\u636E\u5E93\u914D\u7F6E
+server:
+  port: 10083
+
+
+spring:
+  application:
+    name: common-interface-service
+  datasource:
+    name: Starlive
+    url: jdbc:mysql://mysql:3306/Starlive?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  activemq:
+    broker-url:
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: starlive123
+      timeout: 60000
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: -1ms
+# \u5E94\u7528\u670D\u52A1 WEB \u8BBF\u95EE\u7AEF\u53E3
+
+
+
+springdoc:
+    swagger-ui:
+      path: /swagger-ui.html
+
+
+
+# \u4E0B\u9762\u8FD9\u4E9B\u5185\u5BB9\u662F\u4E3A\u4E86\u8BA9 MyBatis \u6620\u5C04
+mybatis:
+  mapper-locations: classpath*:mapper/**/*.xml
+  type-aliases-package: com.starlive.org.Pojo
+  plus:
+    configuration:
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
